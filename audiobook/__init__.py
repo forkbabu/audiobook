@@ -20,7 +20,7 @@ class AudioBook:
             engine.setProperty("rate", 125)
 
             for num in range(self.start_page, pages):
-                print("Reading page number " + str(num) + " page!")
+                print("Reading page number - " + str(num))
                 page = pdfReader.getPage(num)
                 text = page.extractText()
                 engine.save_to_file(text, "page_{}.mp3".format(str(num)))
