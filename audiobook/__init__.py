@@ -23,6 +23,4 @@ class AudioBook:
                 print("Reading page number " + str(num) + " page!")
                 page = pdfReader.getPage(num)
                 text = page.extractText()
-                engine.say(text)
-                engine.runAndWait()
-                engine.stop()
+                engine.save_to_file(text, "{}.wav".format(str(num))
